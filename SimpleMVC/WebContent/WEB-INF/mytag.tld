@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+	
+	<!-- 描述 TLD 文件 -->
+	<description>MyTag 1.0 core library</description>
+	<display-name>MyTag core</display-name>
+	<tlib-version>1.0</tlib-version>
+
+	<!-- 建议在 JSP 页面上使用的标签的前缀 -->
+	<short-name>py</short-name>
+	<!-- 作为 tld 文件的 id, 用来唯一标识当前的 TLD 文件, 多个 tld 文件的 URI 不能重复. 通过 JSP 页面的 taglib 
+		标签的 uri 属性来引用. -->
+	<uri>http://www.alwaysxk.cn/mytag/core</uri>
+	
+	<tag>
+		<name>ReadFile</name>
+		<tag-class>com.tag.ReadFileTag</tag-class>
+		<body-content>empty</body-content>
+		
+		<attribute>
+			<name>src</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>forEach</name>
+		<tag-class>com.tag.ForEachTag</tag-class>
+		<body-content>scriptless</body-content>
+		
+		<attribute>
+			<name>items</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+
+</taglib>
